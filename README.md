@@ -1,6 +1,6 @@
 # Finite Heap #
 
-Finiteheap is my person blog/site built with
+Finiteheap is my personal blog/site built with
 [Jekyll](http://jekyllrb.com).
 
 ## Libraries Used ##

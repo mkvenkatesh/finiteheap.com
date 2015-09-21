@@ -1,3 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
-scp -r _site/* finiteheap:/var/www/finiteheap.com/html
+# from https://www.garron.me/en/blog/using-rsync-with-jekyll.html
+rsync -v -rz --checksum --delete _site/ finiteheap:/var/www/finiteheap.com/html

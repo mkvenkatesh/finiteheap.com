@@ -7,7 +7,6 @@ Finiteheap is my personal blog/site built with
 + [Jekyll](http://jekyllrb.com)
 
 ## Dev Tools Used ##
-+ [Capistrano](http://capistranorb.com/)
 + [Emacs](http://emacsformacosx.com)
 
 ## Workflow ##
@@ -15,7 +14,7 @@ Finiteheap is my personal blog/site built with
 ```bash
 $ jekyll build
 # Stage, commit and push site changes to Github
-$ cap deploy
+$ ./deploy
 ```
 
 ## License ##

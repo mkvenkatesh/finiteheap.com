@@ -4,8 +4,13 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+<img class="left-image" src="/assets/me.jpeg" alt="Venkatesh
+Mandalapa">
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+I'm Venkatesh Mandalapa, the author of this website. My main interests
+are in computer science and programming and this site will mostly be
+about them. There are other areas I'm interested in as well like
+finance, economy, hiking, reading etc., that I might write about.
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+My Github is at [mkvenkatesh](https://github.com/mkvenkatesh) and you
+can contact me at <root@finiteheap.com>.

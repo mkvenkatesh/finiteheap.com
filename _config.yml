@@ -4,7 +4,7 @@ email: root@finiteheap.com
 description: > # this means to ignore newlines until "baseurl:"
   A blog about computer stuff mostly.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://finiteheap.com" # the base hostname & protocol for your site
+url: "https://finiteheap.com" # the base hostname & protocol for your site
 github_username:  mkvenkatesh
 exclude: [deploy]
 

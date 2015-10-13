@@ -22,4 +22,4 @@ $ ./deploy
 Finiteheap.com site content is licensed under [Creative Commons
 Attribution 4.0 license](https://creativecommons.org/licenses/by/4.0/).
 
-Source code distributed under [MIT License](http://finiteheap.com/MIT-LICENSE).
+Source code distributed under [MIT License](https://finiteheap.com/MIT-LICENSE).

@@ -1,10 +1,10 @@
 ---
-layout: page
+layout: pagenotitle
 title: About
 permalink: /about/
 ---
 
-<img class="left-image" src="/assets/me.jpeg" alt="Venkatesh
+<img class="center-image circle-image" src="/assets/me.jpeg" alt="Venkatesh
 Mandalapa">
 
 I'm Venkatesh Mandalapa, the author of this website. My main interests

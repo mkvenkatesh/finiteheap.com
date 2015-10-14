@@ -48,16 +48,23 @@ img {
 .center-image {
     margin: 0 auto;
     display: block;
+		border-radius: 5px;
 }
 
 .right-image {
 		float: right;
-		padding-left: 10px;
+		margin-left: 10px;
+		border-radius: 5px;
 }
 
 .left-image {
 		float: left;
-		padding-right: 10px;
+		margin-right: 10px;
+		border-radius: 5px;
+}
+
+.circle-image {
+    border-radius: 50%;
 }
 
 /**

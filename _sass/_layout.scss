@@ -11,6 +11,7 @@
 }
 
 .site-title {
+		width: 50%;
     font-size: 26px;
     line-height: 56px;
     letter-spacing: -1px;
@@ -21,10 +22,6 @@
     &:visited {
         color: $grey-color-dark;
     }
-}
-
-.site-logo {
-		width: 370px;
 }
 
 .site-nav {
@@ -237,4 +234,37 @@
             font-size: 18px;
         }
     }
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.clearfix:before, .clearfix:after {
+  content: ' ';
+	display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.pagination {
+  margin: 46px 0;
+}
+
+.pagination a, .pagination span {
+	background: #eaeaea;
+	border-radius: 3px;
+	border: 1px solid #f3f3f3;
+	color: #111;
+	padding: 0.4em 1em;
+}
+
+.pagination span {
+  opacity: 0.5;
 }

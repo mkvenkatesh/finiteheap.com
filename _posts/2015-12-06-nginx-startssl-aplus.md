@@ -46,10 +46,10 @@ have `openssl` or for some reason can't get to a terminal to run the
 `openssl` command there are lot of online CSR generators. A simple
 Google search should get you there.
 
-{% highlight bash %}
+```bash
 # replace finiteheap.com with your domain name below
 openssl req -newkey rsa:2048 -nodes -keyout finiteheap.com.key -out finiteheap.com.csr
-{% endhighlight %}
+```
 
 When you run the above command you will be asked bunch of
 questions. If you don't know what the values should be, check
@@ -125,16 +125,16 @@ following command in terminal or just use text editor to combine them
 into one file. When you combine the files the *order* matters here, so
 pay attention.
 
-{% highlight bash %}
+```bash
 cat finiteheap.com.pem sub.class1.server.ca.pem ca.pem > finiteheap.com.chained.pem
-{% endhighlight %}
+```
 
 So your final chained `finiteheap.com.chained.pem` file would have
 three sections like below - the first section is from
 `finiteheap.com.pem`, the second from `sub.class1.server.ca.pem` and
 the final one from `ca.pem`;
 
-{% highlight css %}
+```console
 -----BEGIN CERTIFICATE-----
 MjjsadIERmmfsdmnf/1FxU9nqs/vzANBgkqhkiG9w0BAQsFADB9MQswCQYDVQQGH
 ...
@@ -147,7 +147,7 @@ MIIF2TCCA8GgAwIBAgIHFxU9nqs/vzANBgkqhkiG9w0BAQsFADB9MQswCQYDVQQG
 MIIHyTCCBbGgAwIBAgIBATANBgkqhkiG9w0BAQUFADB9MQswCQYDVQQGEwJJTDEW
 ...
 -----END CERTIFICATE-----
-{% endhighlight %}
+```
 
 You will have 6 files now. Now would be a good time to backup all
 these files to a secure location in case something have to happen to
@@ -171,23 +171,23 @@ move the two files into this folder. You can move the rest of files
 into this location as well if you want them all in once place but they
 are not really necessary for our server configuration.
 
-{% highlight console %}
+```console
 venk@digitalocean:/etc/nginx/ssl$ ls
 finiteheap.com.key
 finiteheap.com.chained.pem
-{% endhighlight %}
+```
 
 Now update your nginx site configuration located in
 `/etc/nginx/sites-enabled`. I only have one site configuration in my
 instance and this is the code inside it.
 
-{% highlight console %}
+```console
 venk@digitalocean:/etc/nginx/sites-enabled$ ls
 finiteheap.com
 venk@digitalocean:/etc/nginx/sites-enabled$ cat finiteheap.com
-{% endhighlight %}
+```
 
-{% highlight nginx %}
+```nginx
 server {
   listen 80;
   server_name finiteheap.com www.finiteheap.com;
@@ -213,7 +213,7 @@ server {
             try_files $uri $uri/ =404;
     }
 }
-{% endhighlight %}
+```
 
 The first block (lines 1-5) makes your server rewrite HTTP to HTTPS
 URLs. So if your site user types in **http://**mydomain.com or
@@ -225,9 +225,9 @@ items from the code above or copy the whole thing displayed above into
 your file and replace the domain and paths that are specific to
 yours. Save your configuration and restart nginx.
 
-{% highlight console %}
+```console
 venk@digitalocean:/etc/nginx/sites-enabled$ sudo service nginx restart
-{% endhighlight %}
+```
 
 When you head on over to your site now, you should see a lock icon in
 your browser URL bar indicating that the site has HTTPS and your

@@ -9,7 +9,9 @@ github_username:  mkvenkatesh
 exclude: [deploy]
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
 
 # pagination
 paginate: 5

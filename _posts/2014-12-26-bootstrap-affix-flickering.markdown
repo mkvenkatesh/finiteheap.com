@@ -33,13 +33,13 @@ is set to 100px in `affix` function because that's the height of the
 Header and we want the NavBar to stick to the top after you scroll
 100px down, past the header.
 
-{% highlight js %}
+```js
 $(".nav").affix({
   offset: {
     top: 100
   }
 });
-{% endhighlight %}
+```
 
 When scrolling the document down exceeds the specified offset,
 Bootstrap adds the CSS class `affix` to the Affix element. If you look
@@ -87,36 +87,36 @@ of the wrapping element.
 **Option 1**
 Source: <http://codepen.io/anon/pen/ogzqvo>
 
-{% highlight html %}
+```html
 <div class="nav-wrapper">
   <div class="nav"> NavBar </div>
 </div>
-{% endhighlight %}
+```
 
-{% highlight css %}
+```css
 .nav-wrapper, .nav {
   height: 60px;
 }
-{% endhighlight %}
+```
 
-{% highlight js %}
+```js
 $(".nav").affix({
   offset: {
     top: 100
   }
 });
-{% endhighlight %}
+```
 
 **Option 2**
 Source: <http://codepen.io/anon/pen/YPGaKa>
 
-{% highlight html %}
+```html
 <div class="nav-wrapper">
   <div class="nav"> NavBar </div>
 </div>
-{% endhighlight %}
+```
 
-{% highlight js %}
+```js
 $(".nav").affix({
   offset: {
     top: 100
@@ -124,7 +124,7 @@ $(".nav").affix({
 });
 
 $(".nav-wrapper").height($(".nav").height());
-{% endhighlight %}
+```
 
 **Note:** If you have some other scripts that manipulate your Affix
 elements' height, make sure to run them before you set the height on

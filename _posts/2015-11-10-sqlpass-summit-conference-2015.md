@@ -62,12 +62,10 @@ the recent acquisition of Datazen it wasn't clear where the different
 products stand. Here's what Microsoft now recommends on BI tools
 usage.
 
-| ----------- + -------- + ------------------- + -------------------------- + -------- |
 |             | Model    | Analyze & Authorize                              | Deliver  |
 | ----------- | -------- | ------------------------------------------------ | -------- |
 | **Cloud**   | Power BI | Power BI                                         | Power BI |
 | **On-Prem** | SSAS     | Excel, Power BI Desktop, Report Builder, Datazen | SSRS     |
-| ----------- + -------- + ------------------- + -------------------------- + -------- |
 
 <br>
 

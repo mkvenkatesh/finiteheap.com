@@ -8,6 +8,8 @@ url: "https://finiteheap.com" # the base hostname & protocol for your site
 github_username:  mkvenkatesh
 exclude: [deploy]
 
+gems: [jekyll-paginate, redcarpet]
+
 # Build settings
 markdown: redcarpet
 redcarpet:

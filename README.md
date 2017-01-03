@@ -7,7 +7,7 @@ Finiteheap is my personal blog/site built with
 + [Jekyll](http://jekyllrb.com)
 
 ## Dev Tools Used ##
-+ [Emacs](http://emacsformacosx.com)
++ [Emacs](https://www.gnu.org/software/emacs/)
 
 ## Workflow ##
 

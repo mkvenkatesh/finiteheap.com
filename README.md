@@ -1,10 +1,13 @@
 # Finite Heap #
 
-Finiteheap is my personal blog/site built with
-[Jekyll](http://jekyllrb.com).
+Finiteheap is my personal blog/site built
+with [Jekyll](http://jekyllrb.com). This site is hosted
+in [Amazon S3](https://aws.amazon.com/s3/)
+with [Cloudfront](https://aws.amazon.com/cloudfront/).
 
 ## Libraries Used ##
 + [Jekyll](http://jekyllrb.com)
++ [AWS CLI](http://docs.aws.amazon.com/cli/latest/userguide/cli-s3.html)
 
 ## Dev Tools Used ##
 + [Emacs](https://www.gnu.org/software/emacs/)
@@ -12,9 +15,11 @@ Finiteheap is my personal blog/site built with
 ## Workflow ##
 
 ```bash
-$ jekyll build
-# Stage, commit and push site changes to Github
-$ ./deploy
+#!/bin/bash
+
+jekyll build
+aws s3 sync _site/ s3://finiteheap.com --delete --size-only
+
 ```
 
 ## License ##

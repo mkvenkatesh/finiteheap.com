@@ -1,4 +1,4 @@
 #!/bin/bash
 
-# from https://www.garron.me/en/blog/using-rsync-with-jekyll.html
-rsync -v -rz --checksum --delete _site/ finiteheap:/var/www/finiteheap.com/html
+jekyll build
+aws s3 sync _site/ s3://finiteheap.com --delete --size-only

@@ -6,16 +6,21 @@ categories: webdev
 comments: true
 disqus_id: "from_do_to_aws"
 ---
-I've been using [MyDomain][1] as registrar and [DigitalOcean][2] for
-hosting my site and as the DNS service. I used [letsencrypt][3] for
-SSL. I use [Zoho Mail][4] as my domain's mail service. I used to pay
-$5/month for my DigitalOcean droplet and about $10/year for domain
-renewals. It was not a bad deal but I did not fully utilize my droplet
-as I intended it to. For hosting a [Jekyll][10] site, which is static,
-I did not need a full blown Linux VPS with SSH control. Initially I
-was thinking I would write some web applications and host it in the
-droplets but that never came so it's time I dialed back my hosting
-services.
+
+## Old Stack
+
+For FiniteHeap, I was using [MyDomain][1] for registrar services
+and [DigitalOcean][2] for hosting and DNS service. I
+used [letsencrypt][3] for SSL. I use [Zoho Mail][4] as my domain's
+mail service. I used to pay $5/month for my DigitalOcean droplet and
+about $10/year for domain renewals. It was not a bad deal but I did
+not fully utilize my droplet as I intended it to. For hosting
+a [Jekyll][10] site, which is static, I did not need a full blown
+Linux VPS with SSH control. Initially I was thinking I would write
+some web applications and host it in the droplets but that never came
+so it's time I dialed back my hosting services.
+
+## Current Stack with AWS
 
 Few days back I switched my stack to Amazon Web Services. I
 transferred my domain from MyDomain to [Amazon Route 53][5]. This took
@@ -27,15 +32,16 @@ screens.
 Once the domain was transferred, it was time to move my site and DNS
 records off DigitalOcean to AWS. I decided to use [Amazon S3][6] for
 my static site hosting since it's scalable, reliable and super
-cheap. On top of that adding Amazon's CDN - [Cloudfront][7] was just
-icing on the cake and insanely cheap as well. There was one more
-reason I went with Cloudfront. Hosting your site with S3 doesn't offer
-you HTTPS capability. This is where Cloudfront comes in. When setting
-up Cloudfront cluster for your S3 site, you can either import SSL/TLS
-certificates (from letsencrypt or other SSL providers) or use Amazon's
-own SSL certificates for free! I just went
-with [Amazon Certificate Manager][9] since it was easier to provision,
-manage and assign them to Cloudfront clusters easily.
+cheap. On top of that, adding Amazon's CDN - [Cloudfront][7] was just
+icing on the cake and insanely cheap as well.
+
+There was one more reason I went with Cloudfront. Hosting your site
+with **S3 doesn't offer you HTTPS capability**. This is where
+Cloudfront comes in. When setting up Cloudfront cluster for your S3
+site, you can either import SSL/TLS certificates (from letsencrypt or
+other SSL providers) or use Amazon's own SSL certificates for free! I
+just went with [Amazon Certificate Manager][9] since it was easier to
+provision, manage and assign them to Cloudfront clusters easily.
 
 I followed this [article][8] from Amazon's Docs on how to use S3 and
 Cloudfront to host a static site. That link is all you need. I don't
@@ -44,7 +50,9 @@ need to write them down here again.
 I moved all my DNS records from DigitalOcean, including MX records for
 Zoho Mail, to Route 53 by using a hosted zone and also updated the
 nameservers for my domain to point to the hosted zone's
-nameservers. Here's the stack transition.
+nameservers.
+
+### Stack Transition
 
 | Service | Old | New |
 | :-----: | :-- | :-- |
@@ -54,6 +62,10 @@ nameservers. Here's the stack transition.
 | **CDN** | None | Amazon Cloudfront (< $0.10/mo for my use) |
 | **Hosted Mail** | Zoho Mail (free) | Zoho Mail (free) |
 | **SSL** | Letsencrypt (free) | Amazon Certificate Manager (free) |
+
+<br>
+
+### Workflow
 
 Now I have myself a world class website infrastructure for pennies.
 

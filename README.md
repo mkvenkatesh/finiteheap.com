@@ -17,7 +17,7 @@ with [Cloudfront](https://aws.amazon.com/cloudfront/).
 ```bash
 #!/bin/bash
 
-jekyll build
+JEKYLL_ENV=production bundle exec jekyll build
 aws s3 sync _site/ s3://finiteheap.com --delete --size-only
 
 ```

@@ -1,0 +1,22 @@
+Jekyll
+-------
+- create new dir - 'mkdir finiteheap.com'
+- 'cd finiteheap.com > bundle init > bundle config set path 'vendor/bundle' > bundle add jekyll'
+- 'bundle exec jekyll new --force --skip-bundle .'
+- 'bundle install'
+- 'bundle exec jekyll serve' > localhost:4000
+- 'bundle update' can be run frequently or 'bundle update <gem>' to update the jekyll project when there are changes to the Gem
+- 'bundle info --path minima' returns the path of the installed gems
+
+Git
+---
+
+- 'git add <file>' - stage a file to Git 
+- 'git reset <file>' - unstage
+- 'git commit -a -m "message"' - commit
+- 'git push origin master' - push commit to github.com
+- 'git status' - check for staged/unstaged/uncommitted files
+
+Deploy
+------
+./deploy

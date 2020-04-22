@@ -1,0 +1,35 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "minima";
+
+.site-title {
+    width: 50%;
+}
+
+img.border {
+    border: 1px solid #eee;
+}
+
+.center-image {
+margin: 0 auto;
+display: block;
+    border-radius: 5px;
+}
+
+.right-image {
+    float: right;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.left-image {
+    float: left;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.circle-image {
+border-radius: 50%;
+}

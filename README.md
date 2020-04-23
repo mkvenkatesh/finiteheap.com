@@ -25,7 +25,7 @@ $> git add *
 $> git status
 
 -- commit
-$> git commmit -a -m "message"
+$> git commit -a -m "message"
 
 -- push to Github
 $> git push origin master
@@ -40,17 +40,19 @@ $> bundle update
 $> bundle exec jekyll serve
 ```
 
-3. Deploy code to S3
+4. Deploy code to S3
 
 ```bash
-#!/bin/bash
+$> ./deploy
 
-JEKYLL_ENV=production bundle exec jekyll build
-aws s3 sync _site/ s3://finiteheap.com --delete --size-only
+-- OR
+
+$> JEKYLL_ENV=production bundle exec jekyll build
+$> aws s3 sync _site/ s3://finiteheap.com --delete --size-only
 
 ```
 
-4. Cloudfront caches objects, so if any objects are changed, like say
+5. Cloudfront caches objects, so if any objects are changed, like say
    `index.html`, use **Invalidations** tab in AWS CloudFront Distribution
    settings to push an invalidation to the edge servers. Use '*' to invalidate
    all objects, or you can be more specific.

@@ -22,6 +22,12 @@ aws s3 sync _site/ s3://finiteheap.com --delete --size-only
 
 ```
 
+## Cloudfront Cache ##
+
+Cloudfront caches objects, so if any objects are changed, like say `index.html`,
+use **Invalidations** tab in AWS CloudFront Distribution settings to push an
+invalidation to the edge servers.
+
 ## License ##
 
 Finiteheap.com site content is licensed under [Creative Commons

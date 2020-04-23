@@ -20,3 +20,7 @@ Git
 Deploy
 ------
 ./deploy
+
+Cloudfront
+----------
+AWS > CloudFront > Distribution > Invalidations > *

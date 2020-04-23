@@ -14,6 +14,34 @@ with [Cloudfront](https://aws.amazon.com/cloudfront/).
 
 ## Workflow ##
 
+1. Make new posts or edit existing posts
+2. Try the following Git commands
+
+```bash
+-- stage all objects that were created or modified 
+$> git add *
+
+-- check status
+$> git status
+
+-- commit
+$> git commmit -a -m "message"
+
+-- push to Github
+$> git push origin master
+
+```
+
+3. Verify site locally at [http://localhost:4000](http://localhost:4000) by
+   running the following command
+
+```
+$> bundle update
+$> bundle exec jekyll serve
+```
+
+3. Deploy code to S3
+
 ```bash
 #!/bin/bash
 
@@ -22,11 +50,10 @@ aws s3 sync _site/ s3://finiteheap.com --delete --size-only
 
 ```
 
-## Cloudfront Cache ##
-
-Cloudfront caches objects, so if any objects are changed, like say `index.html`,
-use **Invalidations** tab in AWS CloudFront Distribution settings to push an
-invalidation to the edge servers.
+4. Cloudfront caches objects, so if any objects are changed, like say
+   `index.html`, use **Invalidations** tab in AWS CloudFront Distribution
+   settings to push an invalidation to the edge servers. Use '*' to invalidate
+   all objects, or you can be more specific.
 
 ## License ##
 

@@ -55,7 +55,9 @@ The instructions to take the exam using the application is pretty clear and stra
 
 The exam questions were pretty straightforward. There were a few AWS services in the questions and responses that were new to me and wasn't covered in any of my preparation but for the most part I knew all the answers to the questions. After finishing the exam, you are presented with a screen showing if you passed or failed. You don't see a score or anything.
 
-I'm not sure If I will receive a score. The exam scores from 0-1000 and 700 is the passing score. I'd be interested to see how I did.
+I'm not sure If I will receive a score. The exam scores from 100-1000 and 700 is the passing score. I'd be interested to see how I did.
+
+**EDIT 5/28/2020**: My score is 908. I don't think I got an email saying my score is ready but I was able to find it in the CertMetrics site under `Previous Exams` menu.
 
 ## Next Steps ##
 

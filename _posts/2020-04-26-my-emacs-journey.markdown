@@ -216,12 +216,12 @@ configuration options.
 ### EDITOR Variable ###
 
 I was getting `*ERROR*: Cannot open terminfo database file` in ansi-term for
-certain applciations like `pass` that uses EDITOR variable. I was using
+certain applications like `pass` that uses EDITOR variable. I was using
 `emacsclient -t`, instead now I use `emacsclient`
 
 ### SQL Setup ###
 
-Make sure you set `SQLPATH` variablle in bash profile and also in your emacs
+Make sure you set `SQLPATH` variable in bash profile and also in your emacs
 using `setenv` or `exec-path-from-shell` to specify your `sqlplus` script (user
 profile) folder.
 

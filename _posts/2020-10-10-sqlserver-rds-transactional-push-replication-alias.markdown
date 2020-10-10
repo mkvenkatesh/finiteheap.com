@@ -50,10 +50,11 @@ Specify the actual server name, ‘‘. (Replication.Utilities)
 See the difference? The server name inside the single quotes in the error above
 is *empty* in my case compared to the screenshot.
 
-Hmm, the error is not that different so I went ahead and followed the resolution
-which was in the blog. The resolution is that we can't use RDS **cname** when
-setting up the subscriber. Instead the computer name of the RDS instance has to
-be used in subscriber connection properties.
+The error I got is not that different from the original so I went ahead and
+followed the resolution which was in the blog. The resolution to the problem was
+that we can't use RDS **cname** when setting up the subscriber. Instead, the
+computer name of the RDS instance has to be used in subscriber connection
+properties.
 
 In the AWS blog post, the server name was conveniently returned from the error
 message, but not in my case. You can get the computer name of RDS instance by
@@ -65,7 +66,7 @@ SELECT @@SERVERNAME
 
 After you get the server name, you can't just paste this in connection dialog
 box. You have to define a DNS entry for this in your `hosts` file. This is also
-shown in the AWs blog post so I followed the same process.
+shown in the AWS blog post so I followed the same process.
 
 I recycled SQL service on my EC2 instance and went through setting up the
 subscription again. This time I got a different error. That's unexpected. The
@@ -83,14 +84,14 @@ The network path was not found.">
 This error is obvious. SQL server is not able to reach the target server
 (subscriber) for some reason. It could be firewall but I ruled this out pretty
 easily. The only difference in configuration between my systems and the blog
-post was that, in the AWS blog post, RDS was running on the default MSSQL port
-which is 1433. I was not. I changed my RDS port to something other than default
-for security reasons. This could explain the error I'm getting and it did.
+post was that, in the AWS blog post RDS was running on the default MSSQL port
+which is 1433. I was not. For security reasons, my RDS was on a different port
+than the default. This could explain the error I'm getting and it did.
 
 ## Resolution ##
 
 Now that I kind of knew this could be the problem, I thought I could simply add
-the port number with the computer name (**EHDYSDS-SHD768, 14019**) in the
+the port number with the computer name (like **EHDYSDS-SHD768, 14019**) in the
 subscriber connection properties. Obviously this didn't work as it can't make
 sense of the hosts entry and just threw a 'network path was not found' error.
 

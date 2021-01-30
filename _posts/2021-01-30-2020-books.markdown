@@ -1,0 +1,51 @@
+---
+layout: post
+title:  "Books Read in 2020"
+date:   2021-01-30 00:00
+categories: [books]
+comments: true
+disqus_id: "books_read_2020"
+---
+
+My goal for 2020 was to read 20 books. I ended up reading 37. It was a good
+year.
+
+**2020 List:** <https://www.goodreads.com/user_challenges/19665805>
+
+<img class="center-image border" src="/assets/images/books-read-2020.jpg"
+alt="Books read in 2020">
+
+I've never been a big reader. When I was growing up I didn't read for pleasure.
+Maybe a book or two in a year. I've read probably less than 200 books in my life
+so far. In the last few years I've been ramping up. I read about 10 books in
+2019 and 37 in 2020. My goal for 2021 is to read 50 books, so around 1 book a
+week.
+
+With COVID lock downs, I stopped spending time on a lot of things that I
+typically would've frittered away with and instead read. Some of the books were
+so interesting, captivating, pleasurable and mind-expanding that I started
+reading more and more and now it has become my default activity. I read at least
+2 hours every day now and sometimes even more, especially on the weekends.
+
+I started using Overdrive's [Libby app](https://www.overdrive.com/apps/libby/)
+to borrow books for free from my local library which has an inexhaustible
+collection. Whatever book I need, I either put on library hold and get it in
+couple weeks, or borrow it right away. I send the books from Libby app to my
+Kindle and it has become my most treasured device in my home. I use my phone
+barely for anything nowadays and I'm only using my computer when I want to do
+programming, blogging or reading technical literature.
+
+In 2020, there are few books that affected me deeply which are listed below.
+Most of the other books were very enjoyable and/or informative as well which
+bootstrapped me into a cycle of reading in 2020 and has continue to propel me in
+2021.
+
+**Best of 2020:**
+* [Educated - Tara Westover](https://www.goodreads.com/book/show/36247169-educated)
+* [To Kill a Mocking Bird - Harper Lee](https://www.goodreads.com/book/show/49378485-to-kill-a-mockingbird)
+* [Factfullness - Hans Rosling](https://www.goodreads.com/book/show/36185940-factfulness)
+* [The Diary of a Young Girl - Anne Frank](https://www.goodreads.com/book/show/48855.The_Diary_of_a_Young_Girl)
+* [Remembrance of the Earth's Past Series (a.k.a The Three Body Problem Trilogy) - Liu Cixin](https://www.goodreads.com/book/show/34569357-remembrance-of-earth-s-past)
+
+There are so many books that I haven't read that I'm very excited to continue
+this new found passion.
